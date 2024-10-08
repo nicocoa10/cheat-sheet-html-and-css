@@ -1,9 +1,159 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" src="css/style.css">
+        <link rel="stylesheet" href="./css/style.css" >
     </head>
     <body>
+        <header>
+            <section class="title-section">
+                <h1 class="title"><span class="main-topic">CSS:</span><span class="subtopic"> Typography</span>
+                </h1>
+            </section>
+        </header>
+
+        <main>
+            <section class="section-topic">
+                <h2 class="section-topic-title">Basic Types</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Serif</td>
+                            <td>Serifs are the small features at the end of strokes within letters</td>
+                        </tr>
+                        <tr>
+                            <td>Sans-Serif</td>
+                            <td>Sans-Serif ('without serif') describes fonts with characters which lack flourishes at the ends of the strokes.</td>
+                        </tr>
+                        <tr>
+                            <td>Monospaced</td>
+                            <td>A monospaced font's characters each occupy the same amount of horizontal space.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="section-topic">
+                <h2 class="section-topic-title">Font Family</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Topic</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Multi-Word Values</td>
+                            <td class="description">When specifying a typeface with multiple words, like Times New Roman, it is recommended to use quotation marks (' ') to group the words together</td>
+                            <td class="code-section">font-family: 'Times New Roman';</td>
+                        </tr>
+                        <tr>
+                            <td>Web Safe Fonts</td>
+                            <td class="description">There is a selection of fonts that will appear the same across all browsers and operating systems.</td>
+                            <td class="code-section"> <a href="https://www.cssfontstack.com/">check here</a></td>
+                        </tr>
+                        <tr>
+                            <td>Fallback Fonts and Font Stacks</td>
+                            <td class="description">Web safe fonts are good fallback fonts that can be used if your preferred font is not available</td>
+                            <td class="code-section">font-family: Caslon, Georgia, 'Times New Roman';</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="section-topic">
+                <h2 class="section-topic-title">Font Set Rules </h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Topic</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Font Weight</td>
+                            <td class="description">In CSS, the Preview: Docs To set the text to be thicker or thinner.font-weight property controls how bold or thin text appears. It can be specified with keywords or numerical values.</td>
+                            <td class="code-section"> font-weight: bold; </td>
+                        </tr>
+                        <tr>
+                            <td>Font Style</td>
+                            <td class="description">You can also italicize text with the 
+                                Preview: Docs To set the font style in which text will appear.
+                                font-style
+                                 property.</td>
+                            <td class="code-section"> font-style: italic; </a></td>
+                        </tr>
+                        <tr>
+                            <td>Text Transformation</td>
+                            <td class="description">Text can also be styled to appear in either all uppercase or lowercase with the text-transform property.</td>
+                            <td class="code-section">text-transform: uppercase;</td>
+                        </tr>
+                        <tr>
+                            <td>Letter Spacing</td>
+                            <td class="description">The letter-spacing property is used to set the horizontal spacing between the individual characters in an element. It’s not common to set the spacing between letters, but it can sometimes help the readability of certain fonts or styles.</td>
+                            <td class="code-section">letter-spacing: 2px;</td>
+                        </tr>
+                        <tr>
+                            <td>Word Spacing</td>
+                            <td class="description">You can set the space between words with the word-spacing property. It’s also not common to increase the spacing between words, but it may help enhance the readability of bolded or enlarged text</td>
+                            <td class="code-section">word-spacing: 0.3em;</td>
+                        </tr>
+                        <tr>
+                            <td>Line Height</td>
+                            <td class="description">We can use the line-height property to set how tall we want each line containing our text to be. Line height values can be a unitless number, such as 1.2, or a length value, such as 12px, 5% or 2em</td>
+                            <td class="code-section">line-height: 1.4;</td>
+                        </tr>
+                        <tr>
+                            <td>Text Alignment</td>
+                            <td class="description">The text-align property, aligns text to its parent element.</td>
+                            <td class="code-section">text-align: right;</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="section-topic">
+                <h2 class="section-topic-title">Web Fonts</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Topic</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Web Fonts Using < link ></td>
+                            <td class="description">Online font services, like Google Fonts, make it easy to find and link to fonts from your site. You can browse and select fonts that match the style of your website.</td>
+                            <td class="code-section"> < link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"></td>
+                        </tr>
+                        <tr>
+                            <td>@font-face</td>
+                            <td class="description">Fonts can also be added using a @font-face ruleset in your CSS stylesheet instead of using a &lt;<link>&gt; element in your HTML document</td>
+                            <td class="code-section"> &lt;@font-face { <br>
+                                font-family: 'MyParagraphFont'; <br>
+                                src: url('fonts/Roboto.woff2') format('woff2'), <br>
+                                     url('fonts/Roboto.ttf') format('truetype'); <br>
+                              }&gt;</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
 
     </body>
 </html>
